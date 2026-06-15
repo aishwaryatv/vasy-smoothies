@@ -46,6 +46,6 @@ import requests
 smoothiefroot_response = requests.get(
     "https://my.smoothiefroot.com/api/fruit/watermelon"
 )
-st.write(smoothiefroot_response.json())
+st.write(f"Response Status: {smoothiefroot_response.status_code}")
 
 
