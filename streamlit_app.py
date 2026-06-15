@@ -48,6 +48,13 @@ smoothiefroot_response = requests.get(
 )
 #st.write(f"Response Status: {smoothiefroot_response.status_code}")
 #st.text(smoothiefroot_response.json())
-st_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=true)
+#st_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=true)
+st.write(f"Response : {smoothiefroot_response.status_code}")
 
+fruit_df = pd.DataFrame([smoothiefroot_response.json()])
+
+st.dataframe(
+    fruit_df,
+    use_container_width=True
+)
 
