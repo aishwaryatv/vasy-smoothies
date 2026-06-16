@@ -21,8 +21,8 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 #st.stop()
 #Convert the snowflake dataframe to panda dataframe so we can use the LOC function
 pd_df=my_dataframe.to_pandas()
-st.dataframe(pd_df)
-st.stop()
+#st.dataframe(pd_df)
+#st.stop()
 
 ingredient_list = st.multiselect('Choose upto to 5 ingredients : '
                                 ,my_dataframe,max_selections=5)
